@@ -1,3 +1,3 @@
-#personal porfolio#
+personal porfolio
 
 going crazy
