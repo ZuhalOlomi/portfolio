@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Zuhal's Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- GSAP (load in head so it's available to scripts at bottom) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Left vertical social/navbar -->
+    <nav class="navbarContainer" aria-label="social links">
+        <ul>
+            <li class="button_lightswitch"><button id="themeToggle" aria-label="Toggle theme">☕️</button></li>
+            <li><a href="https://www.linkedin.com/in/zuhalolomi/" target="_blank" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://medium.com/@zuhalolomi" target="_blank" aria-label="Medium"><i
+                        class="fa-brands fa-medium"></i></a></li>
+            <li><a href="https://x.com/ZuhalOlomi" target="_blank" aria-label="X"><i
+                        class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/zuhal_olomi/" target="_blank" aria-label="Instagram"><i
+                        class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="mailto:zuhal.olomi@mail.utoronto.ca" aria-label="Email"><i
+                        class="fa-regular fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="content">
+            <header class="content__hero">
+                <h1 class="content__heading gs_reveal">hey, i'm zuhal</h1>
+            </header>
+
+            <!-- Video -->
+            <div class="parent_video gs_reveal" aria-hidden="false">
+                <div class="video_wrapper">
+                    <iframe class="div1_video"
+                        src="https://www.youtube.com/embed/irNiGo5vvDg?autoplay=1&mute=1&loop=1&playlist=irNiGo5vvDg"
+                        title="YouTube video" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Feature sections -->
+            <section class="features">
+                <article class="features__item features__item--left gs_reveal gs_reveal_fromLeft">
+                    <div class="features__image">
+                        <div class="features__card"><img class="features__img" src="_DSC0880 2.jpg" alt=""></div>
+                    </div>
+                    <div class="features__content">
+                        <h2 class="features__title gs_reveal">passionate about medicine x ai</h2>
+                        <p class="features__description gs_reveal">
+                            speaking with physician-scientists and ai experts in the field,<br>
+                            i’ve realized that as we navigate through the current ai boom,<br>
+                            ai offers opportunities to address the healthcare challenges that we face today.<br>
+                            i am committed to learning more about ai...
+                        </p>
+                    </div>
+                </article>
+
+                <article class="features__item features__item--right gs_reveal gs_reveal_fromRight">
+                    <div class="features__image">
+                        <div class="features__card"><img class="features__img" src="IMG_1635.jpg" alt=""></div>
+                    </div>
+                    <div class="features__content">
+                        <h2 class="features__title gs_reveal">spine care research</h2>
+                        <p class="features__description gs_reveal">
+                            spinefest 2025 hosted by the uoft spine program changed my life.<br>
+                            after the research event, i became deeply immersed in the subfield of spine care
+                            research.<br>
+                            i’ve even come to appreciate the great potential ai offers to this field.<br>
+                            currently, i am volunteering alongside dr. alvi and dr. pedro at dr. fehlings’ lab, helping
+                            build an image segmentation pipeline for spine surgery.<br>
+                        </p>
+                    </div>
+                </article>
+
+                <article class="features__item features__item--left gs_reveal gs_reveal_fromLeft">
+                    <div class="features__image">
+                        <div class="features__card"><img class="features__img" src="reading books.jpg" alt=""></div>
+                    </div>
+                    <div class="features__content">
+                        <h2 class="features__title gs_reveal">aspiring writer</h2>
+                        <p class="features__description gs_reveal">
+                            few people know that writing plays an important role in my life.<br>
+                            fun fact: during the covid-19 pandemic, i wrote three novel-length (50,000+ words)
+                            stories.<br>
+                            i’ve even––and still do––aspire to pursue writing in the future.<br>
+                            currently, my focus has shifted to technical writing for the time being.<br>
+                        </p>
+                    </div>
+                </article>
+
+                <article class="features__item features__item--right gs_reveal gs_reveal_fromRight">
+                    <div class="features__image">
+                        <div class="features__card"><img class="features__img" src="cpin.jpg" alt=""></div>
+                    </div>
+                    <div class="features__content">
+                        <h2 class="features__title gs_reveal">a dreamer</h2>
+                        <p class="features__description gs_reveal">
+                            i dream larger than foam floating on the sky’s surface,<br>
+                            more countless than the grains of sand on every shore.<br>
+                            if my dreams unraveled into a heap of yarn,<br>
+                            i would braid them into wings—and continue to soar.<br>
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- projects header -->
+            <div class="project_section features__content">
+                <div class="project_title features__title gs_reveal">
+                    <h1>projects 🛠️</h1>
+                </div>
+            </div>
+
+            <!-- projects grid (closed before articles) -->
+            <div class="parent_grid gs_reveal" id="projectsGrid">
+                <a class="project_box" href="https://github.com/ZuhalOlomi/ds3-Brain-Tumor-Detection/tree/master"
+                    target="_blank">
+                    <h2>glioblastoma detection from fmri images</h2>
+                    <h4>used 3 convolutional layers (32→64→128) to classify glioblastomas from ~1200 labelled fmri
+                        scans.</h4>
+                    <h4>achieved an overall accuracy of 84.7% and f1 score of 0.81</h4>
+                </a>
+
+                <a class="project_box" href="https://github.com/ZuhalOlomi/DeepPath" target="_blank">
+                    <h2>deeppath for neurodegeneration: machine learning on immunohistochemical brain images</h2>
+                    <h4>built a cnn to classify stained brain tissue into control vs. neurodegenerative samples.</h4>
+                </a>
+
+                <a class="project_box" href="https://github.com/ZuhalOlomi" target="_blank">
+                    <h2>personal website & portfolio</h2>
+                    <h4>crafted using html, css, and gsap animations to showcase academic and research work.</h4>
+                </a>
+            </div>
+
+            <!-- articles header -->
+            <div class="project_section features__content">
+                <div class="project_title features__title gs_reveal">
+                    <h1>written work 📝</h1>
+                </div>
+            </div>
+
+            <!-- articles grid (separate parent_grid) -->
+            <div class="parent_grid gs_reveal" id="articlesGrid">
+                <a class="project_box" href="#" target="_blank">
+                    <h2>one of a kind (published 2020)</h2>
+                    <h4>a dual reflective piece exploring internal strength during adversity.</h4>
+                </a>
+
+                <a class="project_box" href="#" target="_blank">
+                    <h2>not your world (published 2021)</h2>
+                    <h4>guide and tips for students starting research roles and labs.</h4>
+                </a>
+
+                <a class="project_box" href="#" target="_blank">
+                    <h2>Insights from the 2024 Toronto Neurology Update (published 2024)</h2>
+                    <h4>a reflective piece exploring internal dialogue during adversity.</h4>
+                </a>
+            </div>
+
+            <!-- articles grid (separate parent_grid) -->
+            <div class="parent_grid gs_reveal" id="articlesGrid">
+                <a class="project_box" href="#" target="_blank">
+                    <h2>Building real-world connections on Offline: A new social app (published 2025)</h2>
+                    <h4>summary of key insights and innovations from the 2024 conference, with commentary.</h4>
+                </a>
+
+                <a class="project_box" href="#" target="_blank">
+                    <h2>SpineFEST 2025: Spotlight on spine care research (published 2025)</h2>
+                    <h4>guide and tips for students starting research roles and labs.</h4>
+                </a>
+
+                <a class="project_box" href="#" target="_blank">
+                    <h2>The Environmental Cost of Artificial Intelligence (published 2025)</h2>
+                    <h4>a reflective piece exploring internal dialogue during adversity.</h4>
+                </a>
+            </div>
+
+                        <!-- articles grid (separate parent_grid) -->
+            <div class="parent_grid gs_reveal" id="articlesGrid">
+                <a class="project_box" href="#" target="_blank">
+                    <h2>Breaking into Research: A Student's Guide for Getting Started</h2>
+                    <h4>summary of key insights and innovations from the 2024 conference, with commentary.</h4>
+                </a>
+
+                <a class="project_box" href="#" target="_blank">
+                    <h2>Do you need spine surgery?</h2>
+                    <h4>guide and tips for students starting research roles and labs.</h4>
+                </a>
+
+                <a class="project_box" href="#" target="_blank">
+                    <h2>AI’s Role in Revolutionizing Spine Care</h2>
+                    <h4>a reflective piece exploring internal dialogue during adversity.</h4>
+                </a>
+            </div>
+
+                        <!-- articles grid (separate parent_grid) -->
+            <div class="parent_grid gs_reveal" id="articlesGrid">
+                <a class="project_box" href="#" target="_blank">
+                    <h2>The Challenges of Bringing Machine Learning into Spine Surgery</h2>
+                    <h4>summary of key insights and innovations from the 2024 conference, with commentary.</h4>
+                </a>
+
+                <a class="project_box" href="#" target="_blank">
+                    <h2>A Next Step for Spine Surgery: Image Segmentation Models</h2>
+                    <h4>guide and tips for students starting research roles and labs.</h4>
+                </a>
+            </div>
+
+            <p style="text-align:center; margin-top: 3rem;">made w/ ☕️ by zuhal</p>
+        </div>
+    </main>
+
+    <!-- Inline script: GSAP reveal + theme toggle -->
+    <script>
+        // register plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        // helper functions from earlier
+        function animateFrom(elem, direction) {
+            direction = direction || 1;
+            var x = 0, y = direction * 100;
+            if (elem.classList.contains("gs_reveal_fromLeft")) { x = -100; y = 0; }
+            else if (elem.classList.contains("gs_reveal_fromRight")) { x = 100; y = 0; }
+            elem.style.transform = "translate(" + x + "px, " + y + "px)";
+            elem.style.opacity = "0";
+            gsap.fromTo(elem, { x: x, y: y, autoAlpha: 0 }, {
+                duration: 1.25, x: 0, y: 0, autoAlpha: 1, ease: "expo", overwrite: "auto"
+            });
+        }
+
+        function hide(elem) {
+            gsap.set(elem, { autoAlpha: 0 });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.utils.toArray(".gs_reveal").forEach(function (elem) {
+                hide(elem);
+                ScrollTrigger.create({
+                    trigger: elem,
+                    onEnter: function () { animateFrom(elem); },
+                    onEnterBack: function () { animateFrom(elem, -1); },
+                    onLeave: function () { hide(elem); }
+                });
+            });
+        });
+
+        // theme toggle
+        const toggle = document.getElementById("themeToggle");
+        toggle.addEventListener("click", () => document.body.classList.toggle("dark-mode"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+:root {
+    --bg-color: #ffeedb; /* light brown */
+    --text-color: #5c3d03;
+    --card-color: #efa3a0;
+    --project-bg: #ffdec7;
+    --project-shadow: rgba(92, 61, 3, 0.5);
+    --video-shadow: rgba(92, 61, 3, 0.5);
+}
+
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+}
+
+a {
+    color: inherit; /* inherit text color from parent */
+    text-decoration: none; /* removes the underline */
+}
+
+a:hover {
+    color: var(--text-color); /* optional: stays same as text on hover */
+    text-decoration: none; /* ensures no underline on hover */
+}
+
+/* Left Navbar */
+.navbarContainer {
+    position: fixed;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60px;
+    padding-bottom: 20px;
+    z-index: 1000;
+}
+
+.navbarContainer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.navbarContainer a i {
+    font-size: 2rem;
+    color: #5c3d03;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbarContainer a:hover i {
+    transform: scale(1.2);
+    color: #000;
+}
+
+/* Layout */
+.content {
+    max-width: 1240px;
+    margin-left: 100px;
+    padding: 1rem;
+}
+
+.content__hero {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content__heading {
+    text-align: center;
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.features__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    border-top: dashed 2px grey;
+    padding: 2rem 0;
+}
+
+.features__item--left {
+    flex-direction: row;
+}
+
+.features__item--right {
+    flex-direction: row-reverse;
+}
+
+.features__image {
+    flex: 1 1 40%;
+}
+
+.features__card {
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    background-color: var(--card-color);
+    box-shadow: 0 4px 10px var(--project-shadow);
+}
+
+.features__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.features__content {
+    flex: 1 1 55%;
+}
+
+.features__title {
+    font-size: 1.8em;
+    margin-bottom: 1rem;
+}
+
+.features__description {
+    line-height: 1.6;
+}
+
+/* Projects */
+.parent_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project_box {
+    background: var(--project-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--project-shadow);
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--project-shadow);
+}
+
+/* Articles */
+
+.articles_box {
+    background: var(--project-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--project-shadow);
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.articles_box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px var(--project-shadow);
+}
+
+/* Video */
+.div1_video {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--video-shadow);
+}
+
+.parent_video {
+    margin: 20px 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #dddddd;
+    --card-color: #333333;
+    --project-bg: #2b2b2b;
+    --project-shadow: rgba(255, 255, 255, 0.2);
+    --video-shadow: rgba(255, 255, 255, 0.2);
+}
+
+/* Button */
+.button_lightswitch button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #5c3d03;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.button_lightswitch button:hover {
+    transform: scale(1.2);
+    color: #000;
+}
+
+/* Scroll Reveal Hidden State */
+.gs_reveal {
+    opacity: 0;
+    visibility: hidden;
+    will-change: transform, opacity;
+}
